@@ -17,6 +17,7 @@ spec:
       containers:
       - name: mission-control
         image: tonyb23/k3s-mission-control:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
         resources:
