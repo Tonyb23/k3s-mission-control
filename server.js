@@ -14,6 +14,7 @@ app.get('/health', (req, res) => {
         app:	APP_NAME,
         env:	APP_ENV, 
         version: VERSION,
+        api_key: API_KEY ? 'set' : 'not set',  // never expose the real value
         time:	new Date().toISOString()
     });
 });
