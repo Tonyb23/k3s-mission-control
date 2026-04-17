@@ -4,11 +4,11 @@ const fs	= require('fs');
 const path = require('path');
 
 // Add this line near the top of server.js — after the require statements to Deploy broken verson
-
+/*
 if (process.env.APP_ENV === 'production') {
 throw new Error("Deliberate crash for rollback demo!");
 }
-
+*/
 
 // Read config from environment variables (injected by ConfigMap) 
 const PORT	= process.env.PORT	|| 3000;
