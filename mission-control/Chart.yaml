@@ -4,10 +4,10 @@ description: K3s Mission Control dashboard — a Kubernetes-deployed Node.js app
 type: application
 
 # version: the chart version — increment this when you change templates or values 
-version: 1.1.0
+version: 1.2.0
 
 # appVersion: the version of the application being deployed - Increment this when you change app code or update the base image
-appVersion: "4.0.0"
+appVersion: "5.0.0"
 
 keywords:
 - nodejs
