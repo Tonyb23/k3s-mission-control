@@ -4,7 +4,7 @@ const fs	= require('fs');
 const path = require('path');
 
 // Add near the top of server.js, after the require statements 
-throw new Error('Helm rollback demo — deliberate crash!');
+//throw new Error('Helm rollback demo — deliberate crash!');
 
 // Add this line near the top of server.js — after the require statements to Deploy broken verson
 /*
