@@ -82,7 +82,7 @@ jobs:
             - name: Package and push chart to GHCR
               run: |
                 helm package ./mission-control
-                echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io \
+                echo "${{ secrets.helm_push }}" | helm registry login ghcr.io \
                   --username ${{ github.actor }} \
                   --password-stdin
                 helm push mission-control-*.tgz oci://ghcr.io/tonyb23/helm-charts  
