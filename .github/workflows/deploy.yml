@@ -8,7 +8,7 @@ on:
 permissions:
   contents: read
   packages: write
-  
+
 env:
     IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/k3s-mission-control 
 
@@ -42,9 +42,11 @@ jobs:
     deploy:
         name: Deploy with Helm
         runs-on: ubuntu-latest
-        needs: build-and-push	# Only runs after Job 1 succeeds 
+        needs: build-and-push	# Only runs after Job 1 succeeds
+        permissions:
+          contents: read
+          packages: write 
         steps:
-
             - name: Checkout code
               uses: actions/checkout@v4
 
