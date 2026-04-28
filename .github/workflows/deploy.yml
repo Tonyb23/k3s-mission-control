@@ -80,8 +80,8 @@ jobs:
                 echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io \
                   --username ${{ github.actor }} \
                   --password-stdin
-                helm push mission-control-*.tgz oci://ghcr.io/${{ github.repository_owner }}/helm-charts  
-                
+                helm push mission-control-*.tgz oci://ghcr.io/tonyb23/helm-charts  
+
             #Print release info after deploy
             - name: Show Release status
               run: |
