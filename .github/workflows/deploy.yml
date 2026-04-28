@@ -74,6 +74,14 @@ jobs:
                   --wait \
                   --timeout 3m
             
+            - name: Package and push chart to GHCR
+              run: |
+                helm package ./mission-control
+                echo "${{ secrets.GITHUB_TOKEN }}" | helm registry login ghcr.io \
+                  --username ${{ github.actor }} \
+                  --password-stdin
+                helm push mission-control-*.tgz oci://ghcr.io/${{ github.repository_owner }}/helm-charts  
+                
             #Print release info after deploy
             - name: Show Release status
               run: |
